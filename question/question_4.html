@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/question.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <!-- <img src="/img/plus.png" alt="" class="plus"> -->
+            <h1><a href="" class="logo"><img src="/img/logo.png" alt="" class="logo-img"></a></h1>
+        </header>
+
+        <main>
+            <div class="questionbox">
+                <p class="question">미션! 당신의 물건이 어디 있는지 10초 안에 찾아야한다!</p>
+                <div class="answer">
+                    <!-- 각 버튼에 클릭 이벤트 추가 -->
+                    <div class="btn" onclick="saveChoice(7)">아 너무 쉽지. 나는 항상 자리를 정해둔다고.</div>
+                    <div class="btn" onclick="saveChoice(8)">음... 10초 말고 10분 주면 할 수 있어</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        // 선택한 값(value)을 저장할 변수
+        let selectedValue = null;
+
+        // // 선택한 값을 저장하는 함수
+        // function saveChoice(value) {
+        //     selectedValue = value;
+        //     // 다음 페이지로 이동
+        //     window.location.href = "question_2.html";
+        // }
+
+        // 페이지 로드 후 실행될 코드
+        // 선택한 값을 저장하는 함수
+        function saveChoice(value) {
+            // 선택한 값(value)을 localStorage에 저장
+            localStorage.setItem('selectedValue', value);
+
+            // 선택한 값이 2, 4, 6, 8 중 하나인지 확인
+            if (value === 1 || value ===  3|| value === 5|| value === 8) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/banana.html";
+            }  else if (value === 1 || value ===  4|| value ===  6|| value === 8) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/watermelon.html";
+            } else if (value === 2 || value ===  4|| value === 5|| value === 7) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/peach.html";
+            } else if (value === 2 || value ===  3|| value === 5|| value === 7) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/orange.html";
+            } else if (value === 2 || value ===  4|| value === 5|| value === 8) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/mango.html";
+            } else if (value === 1 || value ===  4|| value === 5|| value === 8) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/strawberry.html";
+            } else if (value === 1 || value ===  4|| value === 6|| value === 7) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/pineapple.html";
+            } else if (value === 1 || value ===  3|| value === 6|| value === 8) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/lemon.html";
+            } else if (value === 2 || value ===  3|| value === 5|| value === 7) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/pear.html";
+            } else if (value === 2 || value ===  3|| value === 5|| value === 8) {
+                // 2, 4, 6, 8 중 하나인 경우에는 "결과페이지주소.html"로 이동
+                window.location.href = "../result/kiwi.html";
+            }
+            
+            
+            // else {
+            //     // 그 외의 경우에는 각 값에 따라 다른 페이지로 이동
+            //     switch (value) {
+            //         case 1:
+            //             window.location.href = "결과페이지1주소.html";
+            //             break;
+            //         default:
+            //             // 기본 동작
+            //             break;
+            //     }
+            // }
+        }
+
+    </script>
+</body>
+
+</html>
