@@ -18,7 +18,8 @@
     display: inline-block;
     /* position: relative; */
     text-align: center;
-    width: 80px;
+    width: 20%;
+    max-width: 100px;
     align-items: center;
     margin-top: 4px;
     /* position: absolute; */
