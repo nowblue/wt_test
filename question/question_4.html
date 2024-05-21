@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/question.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <!-- <img src="/img/plus.png" alt="" class="plus"> -->
+            <h1><a href="" class="logo"><img src="../img/logo_w.png" alt="" class="logo-img"></a></h1>
+        </header>
+
+        <main>
+            <div class="questionbox">
+                <img src="../img/bar4.png" alt="" class="bar">
+                <p class="question">
+                    미션! 당신의 물건이 어디 있는지<br />
+                    10초 안에 찾아야 한다!
+                </p>
+                <img src="../img/find_1.png" alt="" style="width: 300px;">
+                <div class="answer">
+                    <!-- 각 버튼에 클릭 이벤트 추가 -->
+                    <div class="btn">
+                        <div class="btn_text" onclick="saveChoice(7)">아 너무 쉽지. 나는 항상 자리를 정해둔다고!</div>
+                    </div><br />
+                    <div class="btn">
+                        <div class="btn_text" onclick="saveChoice(8)">음... 10초 말고 10분 주면 할 수 있어</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+
+
+// 선택한 값(value)을 저장할 변수
+let selectedValue = null;
+
+// 선택한 값을 저장하는 함수
+function saveChoice(value) {
+            localStorage.setItem('question4', value);
+            window.location.href = "test.html";  // 다음 페이지로 이동
+        }
+
+
+
+
+
+
+        // // 결과 조건 배열
+        // const conditions = [
+        //     { values: [1, 3, 5, 8], url: "../result/banana.html" },
+        //     { values: [1, 4, 6, 8], url: "../result/watermelon.html" },
+        //     { values: [2, 4, 5, 7], url: "../result/peach.html" },
+        //     { values: [2, 3, 5, 7], url: "../result/orange.html" },
+        //     { values: [2, 4, 5, 8], url: "../result/mango.html" },
+        //     { values: [1, 4, 5, 8], url: "../result/strawberry.html" },
+        //     { values: [1, 4, 6, 7], url: "../result/pineapple.html" },
+        //     { values: [1, 3, 6, 8], url: "../result/lemon.html" },
+        //     { values: [2, 3, 5, 8], url: "../result/kiwi.html" },
+        // ];
+
+        // function saveChoice(value) {
+        //     localStorage.setItem('question4', value);
+        //     determineResult();
+        // }
+
+        // function determineResult() {
+        //     const selectedValues = [
+        //         parseInt(localStorage.getItem('question1')),
+        //         parseInt(localStorage.getItem('question2')),
+        //         parseInt(localStorage.getItem('question3')),
+        //         parseInt(localStorage.getItem('question4'))
+        //     ];
+
+        //     let destinationUrl = "../result/default.html";  // Default result
+
+        //     for (const condition of conditions) {
+        //         if (condition.values.every(val => selectedValues.includes(val))) {
+        //             destinationUrl = condition.url;
+        //             break;
+        //         }
+        //     }
+
+        //     // 결과 페이지로 이동
+        //     window.location.href = destinationUrl;
+        // }
+
+        // // 페이지 로드 후 실행될 코드
+        // window.onload = function() {
+        //     const question4Value = localStorage.getItem('question4');
+        //     if (question4Value !== null) {
+        //         determineResult();
+        //     }
+        // };
+            
+        //     // else {
+        //     //     // 그 외의 경우에는 각 값에 따라 다른 페이지로 이동
+        //     //     switch (value) {
+        //     //         case 1:
+        //     //             window.location.href = "결과페이지1주소.html";
+        //     //             break;
+        //     //         default:
+        //     //             // 기본 동작
+        //     //             break;
+        //     //     }
+        //     // }
+        
+    </script>
+
+
+
+    </script>
+</body>
+
+</html>
